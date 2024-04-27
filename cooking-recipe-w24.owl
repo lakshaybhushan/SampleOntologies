@@ -1,0 +1,120 @@
+Prefix(:=<https://iiitd.ac.in/sweb/w2024/cookingrecipe#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://iiitd.ac.in/sweb/w2024/cookingrecipe>
+Annotation(rdfs:comment "")
+
+Declaration(Class(:CuisineType))
+Declaration(Class(:Dish))
+Declaration(Class(:Flavour))
+Declaration(Class(:Ingredient))
+Declaration(Class(:NorthIndianCuisine))
+Declaration(Class(:Recipe))
+Declaration(Class(:SouthIndianCuisine))
+Declaration(Class(:Utensil))
+Declaration(ObjectProperty(:hasRecipe))
+Declaration(ObjectProperty(:hello))
+Declaration(DataProperty(:hasCalorie))
+Declaration(DataProperty(:hasServingSize))
+Declaration(DataProperty(:timeToPrepare))
+Declaration(NamedIndividual(:biryani))
+Declaration(NamedIndividual(:salty))
+Declaration(NamedIndividual(:sour))
+Declaration(NamedIndividual(:spicy))
+Declaration(NamedIndividual(:sweet))
+Declaration(NamedIndividual(:tangy))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasRecipe (:hasRecipe)
+
+ObjectPropertyDomain(:hasRecipe :Recipe)
+ObjectPropertyRange(:hasRecipe :Dish)
+
+# Object Property: :hello (:hello)
+
+SubObjectPropertyOf(:hello :hasRecipe)
+ObjectPropertyDomain(:hello owl:Thing)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :hasServingSize (:hasServingSize)
+
+DataPropertyDomain(:hasServingSize :Dish)
+DataPropertyRange(:hasServingSize xsd:positiveInteger)
+
+# Data Property: :timeToPrepare (:timeToPrepare)
+
+AnnotationAssertion(rdfs:comment :timeToPrepare "Time to perpare is in seconds.")
+DataPropertyDomain(:timeToPrepare :Recipe)
+DataPropertyRange(:timeToPrepare xsd:nonNegativeInteger)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Dish (:Dish)
+
+SubClassOf(:Dish ObjectSomeValuesFrom(:hasRecipe :Recipe))
+
+# Class: :Flavour (:Flavour)
+
+EquivalentClasses(:Flavour ObjectOneOf(:salty :sour :spicy :sweet :tangy))
+
+# Class: :NorthIndianCuisine (:NorthIndianCuisine)
+
+SubClassOf(:NorthIndianCuisine :CuisineType)
+DisjointClasses(:NorthIndianCuisine :SouthIndianCuisine)
+
+# Class: :Recipe (:Recipe)
+
+DisjointClasses(:Recipe :Utensil)
+
+# Class: :SouthIndianCuisine (:SouthIndianCuisine)
+
+SubClassOf(:SouthIndianCuisine :CuisineType)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :biryani (:biryani)
+
+ClassAssertion(:SouthIndianCuisine :biryani)
+
+# Individual: :salty (:salty)
+
+ClassAssertion(:Flavour :salty)
+
+# Individual: :sour (:sour)
+
+ClassAssertion(:Flavour :sour)
+
+# Individual: :spicy (:spicy)
+
+ClassAssertion(:Flavour :spicy)
+
+# Individual: :sweet (:sweet)
+
+ClassAssertion(:Flavour :sweet)
+
+# Individual: :tangy (:tangy)
+
+ClassAssertion(:Flavour :tangy)
+
+
+DifferentIndividuals(:salty :sour :spicy :sweet :tangy)
+)
