@@ -1,0 +1,38 @@
+<!-- Improved version of the input ontology -->
+<owl:Ontology xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+\t<!-- Define more specific subclasses for the class 'Food' -->
+\t<owl:Class rdf:ID="Food">
+\t\t<rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+\t\t<rdfs:label xml:lang="en">Food</rdfs:label>
+\t\t<rdfs:comment xml:lang="en">This class represents food products.</rdfs:comment>
+\t\t<owl:equivalentClass rdf:resource="http://purl.org/goodrelations/v1#Food"/>
+\t</owl:Class>
+\t<owl:Class rdf:ID="DairyProduct">
+\t\t<rdfs:subClassOf rdf:resource="#Food"/>
+\t\t<rdfs:label xml:lang="en">Dairy Product</rdfs:label>
+\t\t<rdfs:comment xml:lang="en">This class represents dairy products.</rdfs:comment>
+\t</owl:Class>
+\t<owl:Class rdf:ID="MeatProduct">
+\t\t<rdfs:subClassOf rdf:resource="#Food"/>
+\t\t<rdfs:label xml:lang="en">Meat Product</rdfs:label>
+\t\t<rdfs:comment xml:lang="en">This class represents meat products.</rdfs:comment>
+\t</owl:Class>
+\t<!-- Add properties to describe the relationships between classes -->
+\t<owl:ObjectProperty rdf:ID="containsIngredient">
+\t\t<rdfs:domain rdf:resource="#Food"/>
+\t\t<rdfs:range rdf:resource="#Ingredient"/>
+\t\t<rdfs:label xml:lang="en">contains ingredient</rdfs:label>
+\t\t<rdfs:comment xml:lang="en">This property relates a food product to its ingredients.</rdfs:comment>
+\t</owl:ObjectProperty>
+\t<!-- Increase the depth of the ontology to include more specific concepts -->
+\t<owl:Class rdf:ID="Fruit">
+\t\t<rdfs:subClassOf rdf:resource="#Food"/>
+\t\t<rdfs:label xml:lang="en">Fruit</rdfs:label>
+\t\t<rdfs:comment xml:lang="en">This class represents fruits.</rdfs:comment>
+\t</owl:Class>
+\t<owl:Class rdf:ID="Vegetable">
+\t\t<rdfs:subClassOf rdf:resource="#Food"/>
+\t\t<rdfs:label xml:lang="en">Vegetable</rdfs:label>
+\t\t<rdfs:comment xml:lang="en">This class represents vegetables.</rdfs:comment>
+\t</owl:Class>
+</owl:Ontology>
