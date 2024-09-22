@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/Broil">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Sizzle">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Reduce">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Sear">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Parboil">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Process">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Smoke">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Stir-fry">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Foam">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Defrost">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Blanch">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Evaporate">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Smoking">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Barbecue">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Warm">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Simmer">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Wilt">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/HeatingProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>HeatingProcess</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/CookingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Dry">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Steam">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Heat">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Saute">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Sweat">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Preheat">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Roast">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Condensed">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Melt">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Wok">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Caramelize">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Splutter">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Pop">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/CrockPot">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Overcook">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Scorching">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Cook">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Soften">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Bubble">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Burn">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Stew">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Pre-heat">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Pan-fry">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Toast">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Scald">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Boil">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Sterilize">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Thaw">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Evaporated">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Char">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Bake">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Braise">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Bubbling">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Poach">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Reheat">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/DeepFry">
+    <rdfs:subClassOf rdf:resource="http://example.org/HeatingProcess"/>
+  </rdf:Description>
+</rdf:RDF>
