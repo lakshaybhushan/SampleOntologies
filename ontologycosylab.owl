@@ -1,30 +1,17 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://cosylab.iiitd.edu.in/foodontology/"
      xml:base="https://cosylab.iiitd.edu.in/foodontology/"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#">
+     xmlns:schema="http://schema.org/"
+     xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
+     xmlns:foodontology="https://cosylab.iiitd.edu.in/foodontology/">
     <owl:Ontology rdf:about="https://cosylab.iiitd.edu.in/foodontology/"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://ontologydesignpatterns.org/opla-sd#entityPosition -->
-
-    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla-sd#entityPosition"/>
     
 
 
@@ -44,6 +31,16 @@
     <owl:ObjectProperty rdf:about="http://schema.org/nutrition">
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Ingredient"/>
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Recipe"/>
+        <rdfs:range rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#NutritionProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/tool -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/tool">
+        <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Description"/>
+        <rdfs:range rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Utensils"/>
     </owl:ObjectProperty>
     
 
@@ -53,6 +50,7 @@
     <owl:ObjectProperty rdf:about="http://schema.org/url">
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Ingredient"/>
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#NaturalSource"/>
+        <rdfs:range rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#NaturalSourceURL"/>
     </owl:ObjectProperty>
     
 
@@ -61,6 +59,7 @@
 
     <owl:ObjectProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/hasNutritionProfile">
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Ingredient"/>
+        <rdfs:range rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#NutritionProfile"/>
     </owl:ObjectProperty>
     
 
@@ -92,6 +91,24 @@
     
 
 
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#schema:conatinedIn -->
+
+    <owl:ObjectProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/#schema:conatinedIn">
+        <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Country"/>
+        <rdfs:range rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#schema:containedIn -->
+
+    <owl:ObjectProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/#schema:containedIn">
+        <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Region"/>
+        <rdfs:range rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Continent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cosylab.iiitd.edu.in/foodontology/#schema:cookingMethod -->
 
     <owl:ObjectProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/#schema:cookingMethod">
@@ -105,6 +122,7 @@
 
     <owl:ObjectProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/#schema:countryOfOrigin">
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Recipe"/>
+        <rdfs:range rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Country"/>
     </owl:ObjectProperty>
     
 
@@ -170,9 +188,6 @@
     <owl:DatatypeProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/flavormoleculeID">
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeName"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:DatatypeProperty>
     
 
@@ -182,9 +197,6 @@
     <owl:DatatypeProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/ingredientID">
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Ingredient"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:DatatypeProperty>
     
 
@@ -194,9 +206,6 @@
     <owl:DatatypeProperty rdf:about="https://cosylab.iiitd.edu.in/foodontology/recipeID">
         <rdfs:domain rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:DatatypeProperty>
     
 
@@ -212,13 +221,18 @@
     
 
 
+    <!-- https://cosylab.iiitd.edu.in/foodontology/Sub-region -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/Sub-region">
+        <owl:equivalentClass rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Country"/>
+    </owl:Class>
+    
+
+
     <!-- https://cosylab.iiitd.edu.in/foodontology/#BiologicalProcess -->
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#BiologicalProcess">
         <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingProcess"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:Class>
     
 
@@ -227,19 +241,26 @@
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#ChemicalProcess">
         <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingProcess"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:Class>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#Continent -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#Continent"/>
     
 
 
     <!-- https://cosylab.iiitd.edu.in/foodontology/#CookingProcess -->
 
-    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#CookingProcess">
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#CookingProcess"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#CookingUtensils -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#CookingUtensils">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Utensils"/>
     </owl:Class>
     
 
@@ -248,19 +269,34 @@
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#CoolingProcess">
         <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingProcess"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#Country -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#Country"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#CuttingTools -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#CuttingTools">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#PreparationUtensils"/>
     </owl:Class>
     
 
 
     <!-- https://cosylab.iiitd.edu.in/foodontology/#Description -->
 
-    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#Description">
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#Description"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#EatingUtensils -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#EatingUtensils">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Utensils"/>
     </owl:Class>
     
 
@@ -269,20 +305,13 @@
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeName">
         <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeProfile"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:Class>
     
 
 
     <!-- https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeProfile -->
 
-    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeProfile">
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
-    </owl:Class>
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeProfile"/>
     
 
 
@@ -290,9 +319,6 @@
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#FlavorProfile">
         <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeProfile"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:Class>
     
 
@@ -301,9 +327,6 @@
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#HeatingProcess">
         <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingProcess"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:Class>
     
 
@@ -329,30 +352,25 @@
                 <owl:allValuesFrom rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#IngredientURL"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:Class>
     
 
 
     <!-- https://cosylab.iiitd.edu.in/foodontology/#IngredientCategory -->
 
-    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#IngredientCategory">
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
-    </owl:Class>
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#IngredientCategory"/>
     
 
 
     <!-- https://cosylab.iiitd.edu.in/foodontology/#IngredientURL -->
 
-    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#IngredientURL">
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
-    </owl:Class>
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#IngredientURL"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#MeasuringTools -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#MeasuringTools"/>
     
 
 
@@ -360,9 +378,14 @@
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#MechanicalProcess">
         <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingProcess"/>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#MixingTools -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#MixingTools">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#PreparationUtensils"/>
     </owl:Class>
     
 
@@ -376,9 +399,26 @@
                 <owl:allValuesFrom rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#FlavorMoleculeProfile"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#NaturalSourceURL -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#NaturalSourceURL"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#NutritionProfile -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#NutritionProfile"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#PreparationUtensils -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#PreparationUtensils">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Utensils"/>
     </owl:Class>
     
 
@@ -404,9 +444,6 @@
                 <owl:allValuesFrom rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Ingredient"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <opla-sd:entityPosition>
-            <rdf:Description/>
-        </opla-sd:entityPosition>
     </owl:Class>
     
 
@@ -414,6 +451,42 @@
     <!-- https://cosylab.iiitd.edu.in/foodontology/#RecipeCategory -->
 
     <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#RecipeCategory"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#Region -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#Region"/>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#ServingUtensils -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#ServingUtensils">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Utensils"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#SpecializedCookingTools -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#SpecializedCookingTools">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingUtensils"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#StoringUtensils -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#StoringUtensils">
+        <rdfs:subClassOf rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#Utensils"/>
+    </owl:Class>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/#Utensils -->
+
+    <owl:Class rdf:about="https://cosylab.iiitd.edu.in/foodontology/#Utensils"/>
     
 
 
@@ -634,6 +707,14 @@
     
 
 
+    <!-- https://cosylab.iiitd.edu.in/foodontology/Pans -->
+
+    <owl:NamedIndividual rdf:about="https://cosylab.iiitd.edu.in/foodontology/Pans">
+        <rdf:type rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingUtensils"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cosylab.iiitd.edu.in/foodontology/Parboil -->
 
     <owl:NamedIndividual rdf:about="https://cosylab.iiitd.edu.in/foodontology/Parboil">
@@ -654,6 +735,14 @@
 
     <owl:NamedIndividual rdf:about="https://cosylab.iiitd.edu.in/foodontology/Pop">
         <rdf:type rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#HeatingProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/Pots -->
+
+    <owl:NamedIndividual rdf:about="https://cosylab.iiitd.edu.in/foodontology/Pots">
+        <rdf:type rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#CookingUtensils"/>
     </owl:NamedIndividual>
     
 
@@ -876,6 +965,14 @@
 
     <owl:NamedIndividual rdf:about="https://cosylab.iiitd.edu.in/foodontology/Wok">
         <rdf:type rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#HeatingProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cosylab.iiitd.edu.in/foodontology/Wrapping_Supplies -->
+
+    <owl:NamedIndividual rdf:about="https://cosylab.iiitd.edu.in/foodontology/Wrapping_Supplies">
+        <rdf:type rdf:resource="https://cosylab.iiitd.edu.in/foodontology/#StoringUtensils"/>
     </owl:NamedIndividual>
     
 
